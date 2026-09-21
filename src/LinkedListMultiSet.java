@@ -32,6 +32,7 @@ public class LinkedListMultiSet extends MultiSet {
 
         if (front.item == item) {
             front = front.next;
+            size--;
             return;
         }
 
@@ -39,6 +40,7 @@ public class LinkedListMultiSet extends MultiSet {
         while (p.next != null) {
             if (p.next.item == item) {
                 p.next = p.next.next;
+                size--;
                 return;
             }
             p = p.next;
